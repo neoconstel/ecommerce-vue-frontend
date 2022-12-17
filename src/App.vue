@@ -175,7 +175,6 @@ import HelloWorld from "./components/HelloWorld.vue";
   </div>
     </nav>
     <div class="HEADER-STRIP h-12 bg-pink-500">latest stuffs sorta</div>
-    <div class="h-96 bg-cyan-600">Banner</div>  
   </header>
 
   <RouterView />

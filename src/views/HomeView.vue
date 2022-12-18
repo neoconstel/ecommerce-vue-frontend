@@ -2,7 +2,6 @@
 </script>
 
 <template>
-  <main>
     <div id="carouselExampleIndicators" class="carousel slide relative" data-bs-ride="carousel">
   <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
     <button
@@ -68,23 +67,56 @@
     <span class="visually-hidden">Next</span>
   </button>
     </div>
-    <div class="PRODUCT-CATEGORIES grid grid-rows-2 grid-cols-2 gap-5 p-5 lg:p-12">
-      <div class="relative">
-        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
-        <h3 class="h3 absolute top-5 left-5 text-gray-300">Clothing</h3>
+
+    <main>
+      <div class="PRODUCT-CATEGORIES grid grid-rows-2 grid-cols-2 gap-5 p-5 lg:p-12">
+        <div class="relative">
+          <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+          <h3 class="h3 absolute top-5 left-5 text-gray-300">Clothing</h3>
+        </div>
+        <div class="relative">
+          <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+          <h3 class="h3 absolute top-5 left-5 text-gray-300">Gadjets</h3>
+        </div>
+        <div class="relative">
+          <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+          <h3 class="h3 absolute top-5 left-5 text-gray-300">Accessories</h3>
+        </div>
+        <div class="relative">
+          <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+          <h3 class="h3 absolute top-5 left-5 text-gray-300">Electronics</h3>
+        </div>
       </div>
-      <div class="relative">
-        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
-        <h3 class="h3 absolute top-5 left-5 text-gray-300">Gadjets</h3>
+
+      <h2 class="h2 text-center text-gray-800">Product Showcase</h2>
+      <p class="text-center text-sm text-gray-800 my-3">Up to 50% off!</p>
+
+      <div class="flex whitespace-nowrap overflow-auto scrollbar-hide" v-dragscroll="true">
+        <img class="w-1/3 inline-block" alt="gallery"
+            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+        <img class="w-1/3 inline-block" alt="gallery"
+            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+        <img class="w-1/3 inline-block" alt="gallery"
+            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+        <img class="w-1/3 inline-block" alt="gallery"
+            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+        <img class="w-1/3 inline-block" alt="gallery"
+            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+        <img class="w-1/3 inline-block" alt="gallery"
+            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">    
       </div>
-      <div class="relative">
-        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
-        <h3 class="h3 absolute top-5 left-5 text-gray-300">Accessories</h3>
-      </div>
-      <div class="relative">
-        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
-        <h3 class="h3 absolute top-5 left-5 text-gray-300">Electronics</h3>
-      </div>  
-    </div>
-  </main>
+    </main>
 </template>
+
+<!-- <style>
+/* hide scrollbars */
+::-webkit-scrollbar{
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    display: none;  /* Safari and Chrome */
+}
+*{
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+</style> -->

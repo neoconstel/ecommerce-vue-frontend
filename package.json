@@ -11,8 +11,10 @@
   "dependencies": {
     "core-js": "^3.26.1",
     "postcss": "^8.4.20",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tw-elements": "^1.0.0-alpha13",
     "vue": "^3.2.45",
+    "vue-dragscroll": "^4.0.5",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

@@ -68,5 +68,23 @@
     <span class="visually-hidden">Next</span>
   </button>
     </div>
+    <div class="PRODUCT-CATEGORIES grid grid-rows-2 grid-cols-2 gap-5 p-5 lg:p-12">
+      <div class="relative">
+        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        <h3 class="h3 absolute top-5 left-5 text-gray-300">Clothing</h3>
+      </div>
+      <div class="relative">
+        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        <h3 class="h3 absolute top-5 left-5 text-gray-300">Gadjets</h3>
+      </div>
+      <div class="relative">
+        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        <h3 class="h3 absolute top-5 left-5 text-gray-300">Accessories</h3>
+      </div>
+      <div class="relative">
+        <img class="w-full" src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHByb2R1Y3R8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        <h3 class="h3 absolute top-5 left-5 text-gray-300">Electronics</h3>
+      </div>  
+    </div>
   </main>
 </template>

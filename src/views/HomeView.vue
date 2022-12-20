@@ -89,7 +89,7 @@ import ProductCard from '@/components/ProductCard.vue'
         </div>
       </div>
 
-      <h2 class="h2 text-center text-gray-800">Product Showcase</h2>
+      <h2 class="text-center text-gray-800">Product Showcase</h2>
       <p class="text-center text-sm text-gray-800 my-3">Up to 50% off!</p>
 
       <div class="PRODUCT-SHOWCASE flex w- whitespace-nowrap overflow-auto scrollbar-hide" v-dragscroll="true">
@@ -107,7 +107,7 @@ import ProductCard from '@/components/ProductCard.vue'
             src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">    
       </div>
       
-      <h2 class="h2 text-center text-gray-800 mt-10">Freshly Added</h2>
+      <h2 class="text-center text-gray-800 mt-10">Freshly Added</h2>
       <p class="text-center text-sm text-gray-800 my-3">All new arrival products and trends here!</p>
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-5"> 
@@ -124,7 +124,6 @@ import ProductCard from '@/components/ProductCard.vue'
         <ProductCard></ProductCard>
         <ProductCard></ProductCard>
       </div>
-
-
+      
     </main>
 </template>

@@ -1,4 +1,5 @@
 <script setup>
+import ProductCard from '@/components/ProductCard.vue'
 </script>
 
 <template>
@@ -105,7 +106,25 @@
         <img class="w-96 h-60 inline-block" alt="gallery"
             src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">    
       </div>
-
       
+      <h2 class="h2 text-center text-gray-800 mt-10">Freshly Added</h2>
+      <p class="text-center text-sm text-gray-800 my-3">All new arrival products and trends here!</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-5"> 
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+        <ProductCard></ProductCard>
+      </div>
+
+
     </main>
 </template>

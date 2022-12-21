@@ -124,6 +124,40 @@ import ProductCard from '@/components/ProductCard.vue'
         <ProductCard></ProductCard>
         <ProductCard></ProductCard>
       </div>
-      
+
+      <div class="flex justify-center gap-x-16 p-16 bg-gray-500 [&>div>p]:text-sm [&>div>p>a]:text-sm [&>div>*]:mt-3 [&>div>p]:text-gray-200 [&>div>p>a]:text-gray-200 mt-12">
+        <div>
+          <h4 class="text-center text-gray-800">Newsletter:::</h4>
+          <p>Get the Latest PrimaX News and Giveaways</p>
+          <form class="flex items-center rounded-3xl h-10 border-2 border-solid border-gray-400" action="">
+            <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+            <input class="w-9/12 bg-transparent rounded-3xl focus:outline-none" type="text" placeholder="Enter Your Email Address">
+            <button class="h-5/6 w-3/12 bg-gray-900 text-gray-300 rounded-3xl m-1" type="submit">Subscribe</button>
+          </form>
+          <p>SERVICE HOURS: Monday-Friday 9AM to 8PM</p>
+          <p>CUSTOMER SERVICE: +234 818 999 7890（First Choice）    +234 809 666 0999</p>
+          <p>Whatsapp: +234 978 999 5432  +234 705 999 8765</p>
+        </div>
+        <div>
+          <h4 class="text-center text-gray-800">About PrimaX:::</h4>
+          <p><a href="">About Us</a></p>
+          <p><a href="">Where to Buy</a></p>
+          <p><a href="">Special Offer</a></p>
+        </div>
+        <div>
+          <h4 class="text-center text-gray-800">Terms:::</h4>
+          <p><a href="">Warranty</a></p>
+          <p><a href="">Order & Shipping</a></p>
+          <p><a href="">Replacement & Refund</a></p>
+          <p><a href="">Terms & Conditions</a></p>
+          <p><a href="">Privacy Policy</a></p>
+        </div>
+        <div>
+          <h4 class="text-center text-gray-800">Get Help:::</h4>
+          <p><a href="">Visit Orihime Care</a></p>
+          <p><a href="">Track Your Order</a></p>
+          <p><a href="">Contact Us</a></p>
+        </div>
+      </div>
     </main>
 </template>

@@ -125,8 +125,12 @@ import ProductCard from '@/components/ProductCard.vue'
         <ProductCard></ProductCard>
       </div>
 
-      <div class="flex justify-center gap-x-16 p-16 bg-gray-500 [&>div>p]:text-sm [&>div>p>a]:text-sm [&>div>*]:mt-3 [&>div>p]:text-gray-200 [&>div>p>a]:text-gray-200 mt-12">
+      <div class="flex flex-col lg:flex-row justify-center gap-x-16 p-16 bg-gray-500 [&>div>p]:text-sm [&>div>p>a]:text-sm [&>div.collapse>*]:mt-3 [&>div>p]:text-gray-200 [&>div>p>a]:text-gray-200 mt-12 space-y-5">
         <div>
+          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#newsLetter" role="button" aria-expanded="false" aria-controls="newsLetter">NEWSLETTER</a>
+          <hr class="mt-2">
+        </div>
+        <div class="collapse" id="newsLetter">
           <h4 class="text-center text-gray-800">Newsletter:::</h4>
           <p>Get the Latest PrimaX News and Giveaways</p>
           <form class="flex items-center rounded-3xl h-10 border-2 border-solid border-gray-400" action="">
@@ -139,12 +143,20 @@ import ProductCard from '@/components/ProductCard.vue'
           <p>Whatsapp: +234 978 999 5432  +234 705 999 8765</p>
         </div>
         <div>
+          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#about" role="button" aria-expanded="false" aria-controls="about">PRIMAX</a>
+          <hr class="mt-2">
+        </div>
+        <div class="collapse" id="about">
           <h4 class="text-center text-gray-800">About PrimaX:::</h4>
           <p><a href="">About Us</a></p>
           <p><a href="">Where to Buy</a></p>
           <p><a href="">Special Offer</a></p>
         </div>
         <div>
+          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#terms" role="button" aria-expanded="false" aria-controls="terms">TERMS</a>
+          <hr class="mt-2">
+        </div>
+        <div class="collapse" id="terms">
           <h4 class="text-center text-gray-800">Terms:::</h4>
           <p><a href="">Warranty</a></p>
           <p><a href="">Order & Shipping</a></p>
@@ -153,6 +165,10 @@ import ProductCard from '@/components/ProductCard.vue'
           <p><a href="">Privacy Policy</a></p>
         </div>
         <div>
+          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#help" role="button" aria-expanded="false" aria-controls="help">GET HELP</a>
+          <hr class="mt-2">
+        </div>
+        <div class="collapse" id="help">
           <h4 class="text-center text-gray-800">Get Help:::</h4>
           <p><a href="">Visit Orihime Care</a></p>
           <p><a href="">Track Your Order</a></p>

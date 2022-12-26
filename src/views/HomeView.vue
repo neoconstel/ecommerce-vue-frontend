@@ -1,5 +1,48 @@
 <script setup>
 import ProductCard from '@/components/ProductCard.vue'
+import { onMounted } from 'vue';
+
+function screenWidthBelowMedium() {
+    return window.matchMedia('(max-width: 1024px)').matches;
+}
+
+onMounted(() => {
+
+  const togglers = document.querySelectorAll(".contacts [data-bs-toggle='collapse']")
+  const toggled = document.querySelectorAll(".contacts .collapse")
+
+  // togglers:  "data-bs-toggle"  
+  // toggled:  "collapse" class
+
+  function manageCollapseState () {
+    togglers.forEach( (toggler) => {
+      if (screenWidthBelowMedium() ){
+      toggler.setAttribute('data-bs-toggle', 'collapse')
+      toggler.classList.remove("hidden")
+      }
+      else{
+      toggler.setAttribute('data-bs-toggle', '')
+      toggler.classList.add("hidden")
+      }
+    })
+
+    toggled.forEach( (toggled) => {
+      if (screenWidthBelowMedium() )
+      toggled.classList.add('collapse')
+      else
+      toggled.classList.remove('collapse')
+    })
+  }
+
+  manageCollapseState()
+
+  window.addEventListener('resize', () => {
+    console.log(`window resized. new width: ${window.innerWidth}`)
+    manageCollapseState()
+  })
+
+})
+
 </script>
 
 <template>
@@ -125,55 +168,57 @@ import ProductCard from '@/components/ProductCard.vue'
         <ProductCard></ProductCard>
       </div>
 
-      <div class="flex flex-col lg:flex-row justify-center gap-x-16 p-16 bg-gray-500 [&>div>p]:text-sm [&>div>p>a]:text-sm [&>div.collapse>*]:mt-3 [&>div>p]:text-gray-200 [&>div>p>a]:text-gray-200 mt-12 space-y-5">
-        <div>
-          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#newsLetter" role="button" aria-expanded="false" aria-controls="newsLetter">NEWSLETTER</a>
-          <hr class="mt-2">
+      <section class="contacts">
+        <div class="flex flex-col lg:flex-row justify-center gap-x-16 p-16 bg-gray-500 [&>div>p]:text-sm [&>div>p>a]:text-sm [&>div.collapse>*]:mt-3 [&>div>p]:text-gray-200 [&>div>p>a]:text-gray-200 mt-12 space-y-5">
+          <div>
+            <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#newsLetter" role="button" aria-expanded="false" aria-controls="newsLetter">NEWSLETTER</a>
+            <hr class="mt-2">
+          </div>
+          <div class="collapse" id="newsLetter">
+            <h4 class="text-center text-gray-800">Newsletter:::</h4>
+            <p>Get the Latest PrimaX News and Giveaways</p>
+            <form class="flex items-center rounded-3xl h-10 border-2 border-solid border-gray-400" action="">
+              <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+              <input class="w-9/12 bg-transparent rounded-3xl focus:outline-none" type="text" placeholder="Enter Your Email Address">
+              <button class="h-5/6 w-3/12 bg-gray-900 text-gray-300 rounded-3xl m-1" type="submit">Subscribe</button>
+            </form>
+            <p>SERVICE HOURS: Monday-Friday 9AM to 8PM</p>
+            <p>CUSTOMER SERVICE: +234 818 999 7890（First Choice）    +234 809 666 0999</p>
+            <p>Whatsapp: +234 978 999 5432  +234 705 999 8765</p>
+          </div>
+          <div>
+            <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#about" role="button" aria-expanded="false" aria-controls="about">PRIMAX</a>
+            <hr class="mt-2">
+          </div>
+          <div class="collapse" id="about">
+            <h4 class="text-center text-gray-800">About PrimaX:::</h4>
+            <p><a href="">About Us</a></p>
+            <p><a href="">Where to Buy</a></p>
+            <p><a href="">Special Offer</a></p>
+          </div>
+          <div>
+            <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#terms" role="button" aria-expanded="false" aria-controls="terms">TERMS</a>
+            <hr class="mt-2">
+          </div>
+          <div class="collapse" id="terms">
+            <h4 class="text-center text-gray-800">Terms:::</h4>
+            <p><a href="">Warranty</a></p>
+            <p><a href="">Order & Shipping</a></p>
+            <p><a href="">Replacement & Refund</a></p>
+            <p><a href="">Terms & Conditions</a></p>
+            <p><a href="">Privacy Policy</a></p>
+          </div>
+          <div>
+            <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#help" role="button" aria-expanded="false" aria-controls="help">GET HELP</a>
+            <hr class="mt-2">
+          </div>
+          <div class="collapse" id="help">
+            <h4 class="text-center text-gray-800">Get Help:::</h4>
+            <p><a href="">Visit Orihime Care</a></p>
+            <p><a href="">Track Your Order</a></p>
+            <p><a href="">Contact Us</a></p>
+          </div>
         </div>
-        <div class="collapse" id="newsLetter">
-          <h4 class="text-center text-gray-800">Newsletter:::</h4>
-          <p>Get the Latest PrimaX News and Giveaways</p>
-          <form class="flex items-center rounded-3xl h-10 border-2 border-solid border-gray-400" action="">
-            <svg class="m-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
-            <input class="w-9/12 bg-transparent rounded-3xl focus:outline-none" type="text" placeholder="Enter Your Email Address">
-            <button class="h-5/6 w-3/12 bg-gray-900 text-gray-300 rounded-3xl m-1" type="submit">Subscribe</button>
-          </form>
-          <p>SERVICE HOURS: Monday-Friday 9AM to 8PM</p>
-          <p>CUSTOMER SERVICE: +234 818 999 7890（First Choice）    +234 809 666 0999</p>
-          <p>Whatsapp: +234 978 999 5432  +234 705 999 8765</p>
-        </div>
-        <div>
-          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#about" role="button" aria-expanded="false" aria-controls="about">PRIMAX</a>
-          <hr class="mt-2">
-        </div>
-        <div class="collapse" id="about">
-          <h4 class="text-center text-gray-800">About PrimaX:::</h4>
-          <p><a href="">About Us</a></p>
-          <p><a href="">Where to Buy</a></p>
-          <p><a href="">Special Offer</a></p>
-        </div>
-        <div>
-          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#terms" role="button" aria-expanded="false" aria-controls="terms">TERMS</a>
-          <hr class="mt-2">
-        </div>
-        <div class="collapse" id="terms">
-          <h4 class="text-center text-gray-800">Terms:::</h4>
-          <p><a href="">Warranty</a></p>
-          <p><a href="">Order & Shipping</a></p>
-          <p><a href="">Replacement & Refund</a></p>
-          <p><a href="">Terms & Conditions</a></p>
-          <p><a href="">Privacy Policy</a></p>
-        </div>
-        <div>
-          <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out" data-bs-toggle="collapse" href="#help" role="button" aria-expanded="false" aria-controls="help">GET HELP</a>
-          <hr class="mt-2">
-        </div>
-        <div class="collapse" id="help">
-          <h4 class="text-center text-gray-800">Get Help:::</h4>
-          <p><a href="">Visit Orihime Care</a></p>
-          <p><a href="">Track Your Order</a></p>
-          <p><a href="">Contact Us</a></p>
-        </div>
-      </div>
+      </section>
     </main>
 </template>

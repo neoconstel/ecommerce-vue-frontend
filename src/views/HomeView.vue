@@ -222,5 +222,13 @@ onMounted(() => {
         </div>
       </div>
     </section>
+
+    <section class="copyright">
+      <div class="[&>*]:text-center bg-gray-900 p-6 text-gray-500">
+        <h2 class="">PrimaX</h2>
+        <p class="mb-3"><small>smart accessories</small></p>
+        <p>© 2022 primaX. Copyright © 2021 primaX Technology Ltd</p>
+      </div>
+    </section>
   </main>
 </template>

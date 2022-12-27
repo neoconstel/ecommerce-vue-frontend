@@ -162,7 +162,7 @@ onMounted(() => {
 
     <section class="contacts">
       <div
-        class="flex flex-col lg:flex-row justify-center gap-x-16 p-16 bg-gray-500 [&>div>p]:text-sm [&>div>p>a]:text-sm [&>div.collapse>*]:mt-3 [&>div>p]:text-gray-200 [&>div>p>a]:text-gray-200 mt-12 space-y-5">
+        class="flex flex-col lg:flex-row justify-center gap-x-16 lg:gap-x-8 p-16 bg-gray-500 [&>div>p]:text-sm [&>div>p>a]:text-sm [&>div.collapse>*]:mt-3 [&>div>p]:text-gray-200 [&>div>p>a]:text-gray-200 mt-12 space-y-5 lg:[&>div>p]:mb-3">
         <div>
           <a class="text-gray-100 inline-block w-full h-full transition duration-150 ease-in-out"
             data-bs-toggle="collapse" href="#newsLetter" role="button" aria-expanded="false"
